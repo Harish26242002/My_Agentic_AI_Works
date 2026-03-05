@@ -1,108 +1,120 @@
-📊 Agentic AI Data Analyzer
+# 📊 Agentic AI Data Analyzer
 
-A Multi-Agent AI Framework that allows users to upload CSV or Excel datasets and automatically generate AI-powered PDF reports with insights.
+A **Multi-Agent AI Framework** that allows users to upload **CSV or Excel datasets** and automatically generate **AI-powered PDF reports** with insights.
 
-The system uses multiple specialized agents to process data, analyze results using an LLM, and generate structured reports.
+The system uses multiple specialized AI agents to process data, analyze results using a Large Language Model (LLM), and generate structured reports.
 
-🚀 Features
+---
 
-🤖 Multi-Agent Architecture
+# 🚀 Features
 
-📂 CSV / Excel file upload
+* 🤖 **Multi-Agent Architecture**
+* 📂 **CSV / Excel file upload**
+* 🧠 **AI-powered data analysis**
+* 📄 **Automatic PDF report generation**
+* 🖥 **Streamlit UI for interaction**
+* ⚡ **FastAPI backend support**
+* 🔄 **Agent orchestration workflow**
+* 📊 **Dataset preview and visualization**
 
-🧠 AI-powered data analysis
+---
 
-📄 Automatic PDF report generation
+# 🧠 Architecture
 
-🖥 Streamlit UI for interaction
-
-⚡ FastAPI backend support
-
-🔄 Agent orchestration workflow
-
-🧠 Architecture
-
-The system follows an Agentic AI pipeline.
+The system follows an **Agentic AI pipeline** where multiple agents collaborate to process and analyze data.
 
 User Uploads File
-        │
-        ▼
-FileAgent
-(load CSV/XLSX using Pandas)
-        │
-        ▼
-AnalysisAgent
-(AI analyzes dataset using LLM)
-        │
-        ▼
-PDFAgent
-(generate structured PDF report)
-        │
-        ▼
+↓
+FileAgent (Loads CSV/XLSX using Pandas)
+↓
+AnalysisAgent (AI analyzes dataset using LLM)
+↓
+PDFAgent (Generates structured PDF report)
+↓
 Downloadable PDF Report
 
-Agents are coordinated by the OrchestratorAgent.
+The workflow is coordinated by the **OrchestratorAgent**.
 
-🗂 Project Structure
+---
+
+# 🗂 Project Structure
+
 Agentic_AI/
-│
-├── agents/
-│   ├── __init__.py
-│   ├── base_agent.py
-│   ├── file_agent.py
-│   ├── analysis_agent.py
-│   ├── pdf_agent.py
-│   └── orchestrator.py
-│
-├── uploads/           # uploaded datasets
-├── pdf_outputs/       # generated reports
-│
-├── streamlit_app.py   # Streamlit UI
-├── main.py            # FastAPI backend
-│
-├── requirements.txt
-├── .env.example
-└── README.md
-⚙️ Installation
+
+agents/
+  **init**.py
+  base_agent.py
+  file_agent.py
+  analysis_agent.py
+  pdf_agent.py
+  orchestrator.py
+
+uploads/  # uploaded datasets
+pdf_outputs/  # generated reports
+
+streamlit_app.py  # Streamlit UI
+main.py  # FastAPI backend
+
+requirements.txt
+.env.example
+README.md
+
+---
+
+# ⚙️ Installation
 
 Clone or navigate to the project directory.
 
-Install dependencies
-pip install -r requirements.txt
-🔑 Environment Variables
+Install dependencies:
 
-Create a .env file.
+pip install -r requirements.txt
+
+---
+
+# 🔑 Environment Variables
+
+Create a `.env` file in the project root.
 
 Example:
 
 OPENAI_API_KEY=your_openai_key
 MODEL_NAME=gpt-4o-mini
-▶️ Running the Application
-Run Streamlit UI
+
+---
+
+# ▶️ Running the Application
+
+### Run Streamlit UI
+
 streamlit run streamlit_app.py
 
-Open:
+Open in browser:
 
 http://localhost:8501
-Optional: Run FastAPI Backend
+
+---
+
+### Optional: Run FastAPI Backend
+
 uvicorn main:app --reload
 
 API available at:
 
 http://localhost:8000
-📂 Usage
 
-Open the Streamlit UI
+---
 
-Upload a CSV or Excel file
+# 📂 Usage
 
-Click Generate Report
+1. Open the **Streamlit UI**
+2. Upload a **CSV or Excel file**
+3. Preview dataset and visualizations
+4. Click **Generate AI Report**
+5. Download the generated **PDF report**
 
-The AI analyzes the dataset
+---
 
-Download the generated PDF report
-
-📊 Example Dataset
+# 📊 Example Dataset
 
 Example CSV file:
 
@@ -112,38 +124,34 @@ Sarah,1500,EU
 Mike,900,Asia
 Anna,2000,US
 
-The system will generate a PDF summary with insights.
+The system will generate a **PDF summary with insights and analysis**.
 
-🛠 Technologies Used
+---
 
-LangChain
+# 🛠 Technologies Used
 
-LangGraph
+* LangChain – LLM application framework
+* LangGraph – multi-agent workflow orchestration
+* FastAPI – backend API framework
+* Streamlit – interactive UI
+* Pandas – data processing
+* FPDF – PDF generation
+* OpenAI API – large language model
 
-FastAPI
+---
 
-Streamlit
-
-Pandas
-
-FPDF
-
-OpenAI API
-
-💡 Future Improvements
+# 💡 Future Improvements
 
 Possible upgrades:
 
-📈 Automatic charts in PDF reports
+* 📈 Automatic charts inside generated PDF reports
+* 🧠 Advanced LangGraph agent workflow
+* 📊 More advanced data visualizations
+* 🌐 Full web dashboard with authentication
+* ☁ Cloud deployment support
 
-🧠 LangGraph-based agent workflow
+---
 
-📊 Advanced data visualization
+# 📄 License
 
-🌐 Full web dashboard
-
-☁ Cloud deployment
-
-📄 License
-
-This project is provided for educational and development purposes.
+This project is provided for **educational and development purposes**.
